@@ -1,0 +1,25 @@
+.navbar-brand:hover {
+    color: rgb(255, 195, 195);
+  }
+  
+  .nav-item a:hover {
+    color: rgb(255, 195, 195);
+  }
+  .active {
+    color: white !important;
+  }
+  
+  .navbar-nav > li > .dropdown-menu {
+    background-color: #212529;
+    border-radius: #efefee;
+  }
+  .dropdown-item {
+    color: #97999b;
+  }
+  .dropdown-item:hover,
+  .dropdown-item:focus {
+    background-color: #212529;
+  }
+  .dropdown-menu {
+    border-color: #efefee;
+  }

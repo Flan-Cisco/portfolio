@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="body.css" />
+    <link rel="stylesheet" href="header.css" />
+    <title>Portfolio</title>
+  </head>
+  <header>
+    <nav
+      class="navbar navbar-dark navbar-expand-lg bg-dark border-bottom border-body"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="">Portfolio</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="#"
+                onclick="seleccionar(0);changeDisplay(0)"
+                id="opcion0"
+                >Video</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                href="#"
+                onclick="seleccionar(1);changeDisplay(1)"
+                id="opcion1"
+                >Biography</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                id="opcion5"
+              >
+                Projects
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    role="button"
+                    onclick="seleccionar(2);changeDisplay(2)"
+                    >PacMen</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    role="button"
+                    onclick="seleccionar(3);changeDisplay(3)"
+                    >Eye Tracking</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    role="button"
+                    onclick="seleccionar(4);changeDisplay(4)"
+                    >Real Time Bus Tracking</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <body>
+    <div style="margin: 10px">
+      <div id="contenedor-video"
+      class="hidden">
+        <div
+          id="video"
+          style="width: 50px; height: 50px; background-color: green"
+        ></div>
+      </div>
+      <div id="contenedor-bio" class="mostrar">
+        <div id="bio">
+            <div class="nombre">
+                <h1>
+                    Francisco Andrés Álvarez Correa
+                </h1>
+            </div>
+          <div class="biography">
+            <p>
+                Francisco Alvarez Correa con RUT 19.078.213-1, soltero y con fecha de nacimiento el 06 de abril del 1995, cursó sus estudios de Ensenanza Básica y Media en el Colegio Mayor Tobalaba (Santiago, 2002-2013), rindió la prueba de 
+                seleccion universitaria el mismo año (2013) de haber egresado de enseñanza media e ingresó a estudiar Ingeniería Civil
+                Informatica en la Universidad Técnica Federico Santa María en marzo del 2014 y realizo traslado a la misma carrera en la Universidad Andres Bello obteniendo su título en Diciembre del 2020.
+                <br/>Formacion académica complementaria obteniendo el grado de inglés Intermedio Alto en la Universidad de Toronto (Canada), certificación obtenida en el primer semestre del 2017. <br/>Titulado como Ingeniero Civil Informatico en Diciembre del 2020 con distinción CUM LAUDE.
+                <br/>Desarrollo actividades como desarrollador de Software enfocado en Frontend en la empresa AXITY durante 2 años, donde se utilizo el FrameWork Angular y a la fecha se encuentra perfeccionando su idioma Ingles en Toronto Canada en la escuela de idioma Kaplan.
+            </p>
+          </div>
+          <div class="photo">
+            <img
+              src="./assets/photo.jpg"
+              width="250px"
+              height="250px"
+              alt="profile picture of the developer"
+            />
+          </div>
+          <div class="links">
+            <div class="github">
+              <a href="https://github.com/Flan-Cisco" target="_blank">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 17 17"
+                  width="70"
+                  height="70"
+                >
+                  <path
+                    d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+            <div class="linkedin">
+              <a
+                href="https://www.linkedin.com/in/falvarez19261160/"
+                target="_blank"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  width="70"
+                  height="70"
+                >
+                  <path
+                    d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="contact">
+            <h6>
+              Contact Information:
+              <a id="email" href="mailto:f.alvarezcorrea1@gmail.com"
+                >f.alvarezcorrea1@gmail.com</a
+              >
+            </h6>
+          </div>
+        </div>
+      </div>
+      <div id="contenedor-pac"
+      class="hidden">
+        <div
+          id="pac"
+          style="width: 50px; height: 50px; background-color: black"
+        ></div>
+      </div>
+      <div id="contenedor-eyeTrack"
+      class="hidden">
+        <div
+          id="eyeTrack"
+          style="width: 50px; height: 50px; background-color: yellow"
+        ></div>
+      </div>
+      <div id="contenedor-busTrack"
+      class="hidden">
+        <div
+          id="busTrack"
+          style="width: 50px; height: 50px; background-color: gray"
+        ></div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
